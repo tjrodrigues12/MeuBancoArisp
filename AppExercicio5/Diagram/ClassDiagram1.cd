@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AppExercicio5.Domain.Banco">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAACAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Domain\Banco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppExercicio5.Domain.Cliente">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Domain\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppExercicio5.Domain.Conta">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAIgAAAAAAAAAAAAAAAAAQEACAIAIAAAgAAEA=</HashCode>
+      <FileName>Domain\Conta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AppExercicio5.Domain.ContaCorrente">
+    <Position X="1.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Domain\ContaCorrente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppExercicio5.Domain.ContaPoupanca">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAA=</HashCode>
+      <FileName>Domain\ContaPoupanca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AppExercicio5.Interface.IConta">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IConta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AppExercicio5.Util.TipoConta">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAA=</HashCode>
+      <FileName>Util\Enumerador.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppExercicio5.Util.TipoOperacao">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABECAQAAIAAAAA=</HashCode>
+      <FileName>Util\Enumerador.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppExercicio5.Util.InfoConta">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAQAA=</HashCode>
+      <FileName>Util\Enumerador.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
