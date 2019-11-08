@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuBancoArisp", "MeuBancoArisp\MeuBancoArisp.csproj", "{67707AEC-A39A-4696-A692-3ED33922981A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppExercicio3", "AppExercicio3\AppExercicio3.csproj", "{67707AEC-A39A-4696-A692-3ED33922981A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppExercicio4", "AppExercicio4\AppExercicio4.csproj", "{A559F62E-E795-446A-A5DD-8614E0905F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppExercicio5", "AppExercicio5\AppExercicio5.csproj", "{881310D1-22FE-432A-BCA6-030972D0FB9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{67707AEC-A39A-4696-A692-3ED33922981A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67707AEC-A39A-4696-A692-3ED33922981A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67707AEC-A39A-4696-A692-3ED33922981A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A559F62E-E795-446A-A5DD-8614E0905F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A559F62E-E795-446A-A5DD-8614E0905F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A559F62E-E795-446A-A5DD-8614E0905F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A559F62E-E795-446A-A5DD-8614E0905F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881310D1-22FE-432A-BCA6-030972D0FB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881310D1-22FE-432A-BCA6-030972D0FB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881310D1-22FE-432A-BCA6-030972D0FB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881310D1-22FE-432A-BCA6-030972D0FB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

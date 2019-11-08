@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67707AEC-A39A-4696-A692-3ED33922981A}</ProjectGuid>
+    <ProjectGuid>{881310D1-22FE-432A-BCA6-030972D0FB9D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MeuBancoArisp</RootNamespace>
-    <AssemblyName>MeuBancoArisp</AssemblyName>
+    <RootNamespace>AppExercicio5</RootNamespace>
+    <AssemblyName>AppExercicio5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
