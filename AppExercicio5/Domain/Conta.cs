@@ -14,7 +14,7 @@ namespace AppExercicio5.Domain
         #region| Properties |
         public int NumeroAgencia { get; set; }
         public int NumeroConta { get; set; }
-        public double Saldo { get; set; }
+        protected double Saldo { get; set; }
         public List<Cliente> Titulares { get; set; }
         public abstract TipoConta RetornarTipoConta { get; }
         #endregion

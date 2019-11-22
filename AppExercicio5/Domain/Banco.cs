@@ -2,12 +2,12 @@
 {
     public static class Banco
     {
-        #region Fields
+        #region | Fields |
         private static readonly string NomeBanco = "Meu Banco .NET";
         private static int NumeracaoConta = 0;
         #endregion
 
-        #region Methods
+        #region | Methods |
         public static string ObterNomeBanco()
         {
             return NomeBanco;

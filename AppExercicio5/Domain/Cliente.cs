@@ -2,12 +2,12 @@
 {
     public class Cliente
     {
-        #region Properties        
+        #region | Properties |
         public string CPF { get; set; }
         public string Nome { get; set; }
         #endregion
 
-        #region Constructors
+        #region | Constructors |
         public Cliente()
         {
 

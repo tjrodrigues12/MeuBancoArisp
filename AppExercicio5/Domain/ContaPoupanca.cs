@@ -34,7 +34,7 @@ namespace AppExercicio5.Domain
         }
         #endregion
 
-        #region Constructor
+        #region | Constructor |
         public ContaPoupanca()
         {
            

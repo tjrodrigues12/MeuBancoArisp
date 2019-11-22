@@ -62,7 +62,12 @@ namespace AppExercicio5
 
         static void ApresentarDadosConta(Conta conta)
         {
-            //It will be needed to implement the method here
+            Write($"Tipo de Conta: {Enum.GetName(conta.RetornarTipoConta.GetType(), conta.RetornarTipoConta)}");
+            Write($"Numero da agência: {conta.NumeroAgencia}");
+            Write($"Numero da Conta: {conta.NumeroConta}");
+
+            Write("Titulare(s): ");
+            ListarTitulares(conta.Titulares);
         }
 
         static Conta AberturaDeConta()
@@ -71,8 +76,25 @@ namespace AppExercicio5
             TipoConta tipoConta;
             Conta conta = null;
 
-            //It will be needed to implement the method here
+            tipoConta = (TipoConta)Convert.ToChar(WriteRead("Informe o tipo de conta que deseja abrir: C => Conta Corrente / P => Poupança ").ToUpper());
 
+            switch (tipoConta)
+            {
+                case TipoConta.ContaCorrente:
+                    conta = new ContaCorrente();
+                    break;
+
+                case TipoConta.ContaPoupanca:
+                    conta = new ContaPoupanca();
+                    break;
+            }
+
+            conta.NumeroAgencia = Convert.ToInt32(WriteRead("Informe o número da agência: "));
+            conta.NumeroConta = Banco.NovoNumeroConta();
+            conta.Titulares = AdicionarTitular();
+            conta.Depositar(DepositoInicial());
+
+            ReturnText();
 
             return conta;
 
@@ -80,20 +102,42 @@ namespace AppExercicio5
 
         static Conta SolicitarDadosConta(InfoConta infoConta, List<Conta> listaContas)
         {
-            int numeroAgencia;
-            int numeroConta;
-            Conta conta = null;
 
-            //It will be needed to implement the method here
+            Write($"Informe os dados da conta {Enum.GetName(infoConta.GetType(), infoConta)}: ");
+
+            int numeroAgencia = Convert.ToInt32(WriteRead("Informe o numero da agência: "));
+            int numeroConta = Convert.ToInt32(WriteRead("Informe o número da Conta "));
+
+            Conta conta = listaContas.FirstOrDefault(c => c.NumeroAgencia == numeroAgencia
+                          && c.NumeroConta == numeroConta);
 
             return conta;
         }
 
         static List<Cliente> AdicionarTitular()
-        {
-            List<Cliente> listaClientes = new List<Cliente>();
+        {            
+            var numTitular = 1;
+            var listaClientes = new List<Cliente>();
 
-            //It will be needed to implement the method here
+
+            do
+            {
+                var cliente = new Cliente();
+                
+                cliente.CPF = WriteRead($"Informe o CPF do {numTitular}° Titular: ");
+                cliente.Nome = WriteRead($"Informe o {numTitular}° Nome do Titular: ");
+
+                listaClientes.Add(cliente);
+
+                if(WriteRead("Deseja adicionar mais um Titular? S=> Sim / N=> Não").ToLower() == "n")
+                {
+                    break;
+                }
+
+                numTitular++;
+
+            } while (true);
+
 
             return listaClientes;
 
@@ -118,15 +162,16 @@ namespace AppExercicio5
 
         }
 
-        static bool DepositoInicial(out double valor)
+        static double DepositoInicial()
         {
+            var valor = 0.00;
+            
+            if(WriteRead("Deseja realizar um depósito inicial? S=> sim  / N=> não: ").ToLower() == "s")
+            {
+                valor = Convert.ToDouble(WriteRead("Informe o valor inicial de depósito: "));         
+            }
 
-            bool retorno = false;            
-            valor = 0.00;
-
-            //It will be needed to implement the method here
-
-            return retorno;
+            return valor;
 
         }
 
@@ -155,17 +200,20 @@ namespace AppExercicio5
                 if (tipoMovimento.ToLower() == "r")
                     break;
 
+                var valor = 0.00;
                 switch (tipoMovimento.ToLower())
                 {
                     case "d":
 
-                        //Implement
-
+                        valor = Convert.ToDouble(WriteRead("Informe o valor de deposito: "));
+                        conta.Depositar(valor);
+                        
                         break;
 
                     case "s":
 
-                        //Implement
+                        valor = Convert.ToDouble(WriteRead("Informe o valor que deseja sacar: "));
+                        conta.Sacar(valor);
 
                         break;
                 }
@@ -185,13 +233,37 @@ namespace AppExercicio5
             if (contaOrigem == null || contaDestino == null)
                 return;
 
-            //Implement
+            contaOrigem.Sacar(valor);
+            contaDestino.Depositar(valor);
+
+            ReturnText();
 
         }
 
         static void ListarContas(List<Conta> listaContas)
         {
-            //Implement
+            Write("Lista de contas: ");
+            foreach (var item in listaContas)
+            {
+                ApresentarDadosConta(item);
+            }
+
+            Write("-----------------------------------------");
+
+            ReturnText();
+
+        }
+
+        static void ListarTitulares(List<Cliente> listaClientes)
+        {
+            var numTitular = 1;
+            foreach (var item in listaClientes)
+            {
+                Write($"Nome do {numTitular}º Titular: {item.Nome}");
+                Write($"CPF do {numTitular}º Titular: {item.CPF}");
+
+                numTitular++;
+            }
         }
 
         static void Write(string message)
@@ -207,7 +279,8 @@ namespace AppExercicio5
 
         static void ReturnText()
         {
-            Console.WriteLine("Pressione uma tecla para retornar...");
+            Write("Operação realizada com sucesso!");
+            Write("Pressione uma tecla para retornar...");
             Console.ReadKey();
         }
     }
